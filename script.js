@@ -23,10 +23,28 @@ let letters;
 let lives=5;
 let score;
 
+// Ambitious - Aspiring
+// Dangerous - Hazardous
+// Enthusiasm - Passion
+// Adventure - Expedition
+// Magnificent - Splendid
+// Captivate - Enchant
+// Spectacular - Impressive
+// Mysterious - Cryptic
+// Fascinating - Intriguing
+// Accomplish - Achieve
+
 const words = new Map([
-  ['apple', 'keeps doc away'],
-  ['pear', 'pata nahi'],
-  ['pomagranate', 'ananas'],
+  ['ambitious', 'Aspiring'],
+  ['Dangerous', 'Hazardous'],
+  ['Enthusiasm', 'Passion'],
+  ['Adventure', 'Expedition'],
+  ['Magnificent', 'Splendid'],
+  ['Captivate', 'Enchant'],
+  ['Spectacular', 'Impressive'],
+  ['Mysterious', 'Cryptic'],
+  ['Fascinating', 'Intriguing'],
+  ['Accomplish', 'Achieve'],
 ]);
 
 // making a list of only keys from words
@@ -85,7 +103,7 @@ const showNotif = function (msg) {
         notif.classList.remove('hidden');
         notifSpan.textContent = select_word;
         notifContent.textContent = `You ${msg}`;
-      }, 1000);
+      }, 2000);
     } else {
       notif.classList.remove('hidden');
       notifSpan.textContent = select_word;
