@@ -96,8 +96,18 @@ body {
 }
 
 .leftHangmanContainer{
-  margin: 6rem 1rem;
+  margin: 4rem 1rem;
 }
+
+.hangImgL{
+  margin-top: 2rem;
+  height: 8rem;
+}
+
+/* .hangImgR{
+  margin-top: 2rem;
+  height: 8rem;
+} */
 
 .word-div {
   display: inline-flex;

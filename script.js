@@ -3,6 +3,8 @@ const gameScore = document.querySelector('#gameScore');
 const letterDiv = document.querySelector('.letter-div');
 const hintText = document.querySelector('.hint-txt');
 const hangman = document.querySelector('.hangmanContainer');
+const hangImgL = document.querySelector('.hangImgL')
+const hangImgR= document.querySelector('.hangImgR')
 const liveSpan = document.querySelector('.lives');
 const wordDiv = document.querySelector('.word-div');
 const notif = document.querySelector('.notif');
@@ -76,9 +78,19 @@ init('start');
 
 // show notification
 const showNotif = function (msg) {
-  notif.classList.remove('hidden');
-  notifSpan.textContent = select_word;
-  notifContent.textContent = `You ${msg}`;
+  const showNotif = function (msg) {
+    if (msg === 'lost') {
+      setTimeout(function() {
+        notif.classList.remove('hidden');
+        notifSpan.textContent = select_word;
+        notifContent.textContent = `You ${msg}`;
+      }, 3000);
+    } else {
+      notif.classList.remove('hidden');
+      notifSpan.textContent = select_word;
+      notifContent.textContent = `You ${msg}`;
+    }
+  };
 };
 
 // decrease life
@@ -86,7 +98,7 @@ const decreaseLife = function () {
   lives--;
   score--;
   gameScore.innerText=score;
-  console.log(`score:${score}`);
+  hangmanImage();
   liveSpan.textContent = lives;
   if (lives === 0) {
     showNotif('lost');
@@ -138,6 +150,29 @@ const letterPress = function () {
   }
   this.classList.add('disabled');
 };
+
+//A function to use different images for hangman for differnt values of lives remaining
+const hangmanImage = function(){
+  if(lives===5){
+    hangImgL.src = './img/hangman1.png';
+  }
+  else if(lives===4){
+    hangImgL.src = './img/hangman2.png';
+  }
+  else if(lives===3){
+    hangImgL.src = './img/hangman3.png';
+  }
+  else if(lives===2){
+    hangImgL.src = './img/hangman4.png';
+  }
+  else if(lives===1){
+    hangImgL.src = './img/hangman5.png';
+  }
+  else {
+    hangImgL.classList.add('hidden');
+    hangImgR.src='./img/hangingMan.png'
+  };
+}
 
 // listening to letter buttons presses
 letters.forEach(btn => {
