@@ -50,7 +50,7 @@ const init = function (state) {
     letters.forEach(btn => {
       btn.classList.remove('disabled');
       notif.classList.add('hidden');
-      gameScore.innerText=0;
+      gameScore.innerText = 0;
     });
   }
   //getting the random word
@@ -85,7 +85,7 @@ const showNotif = function (msg) {
 const decreaseLife = function () {
   lives--;
   score--;
-  gameScore.innerText=score;
+  gameScore.innerText = score;
   console.log(`score:${score}`);
   liveSpan.textContent = lives;
   if (lives === 0) {
@@ -111,7 +111,7 @@ const getindexes = function (letter) {
 const checkWord = function () {
   let val = true;
   for (let i = 0; i < wordDiv.children.length; i++) {
-    if (wordDiv.children[i].textContent === '_') {
+    if (wordDiv.children[i].textContent === '____') {
       val = false;
     }
   }
@@ -126,11 +126,11 @@ const letterPress = function () {
     const indexes_list = getindexes(letter);
     indexes_list.forEach((val, i) => {
       wordDiv.children[val].textContent = this.textContent;
-      score+=3;
-      gameScore.innerText=score;
+      score += 3;
+      gameScore.innerText = score;
       console.log(score);
     });
-    if (checkWord()){
+    if (checkWord()) {
       showNotif('won')
     };
   } else {
@@ -150,7 +150,7 @@ resetButton.addEventListener('click', function () {
 });
 
 // listening to back button
-backButton.addEventListener('click',()=>{
+backButton.addEventListener('click', () => {
   // console.log('back');
   window.close();
 })
