@@ -7,3 +7,4 @@
 - [ ] responsive
 - [ ] scoreContainer BG
 - [ ] end game card
+- [ ] lives counter
