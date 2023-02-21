@@ -3,6 +3,7 @@
 - [x] basic ui
 - [x] points system
 - [x] add drawing
+- [x] add more words and synonyms 
 - [ ] boxes around dashes
 - [ ] responsive
 - [ ] scoreContainer BG
