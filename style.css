@@ -1,5 +1,4 @@
 body {
-  background-image: linear-gradient(to right, #f46b45, #eea849);
   color: white;
   text-align: center;
   padding: 0;
@@ -7,9 +6,10 @@ body {
 }
 
 .wrapper{
+  background-image: url(./img/background.png);
   width: 360px;
   height: fit-content;
-  /* padding: 0.1rem 0.2rem; */
+  padding: 0rem 0.5rem 1rem 0.5rem;
 }
 
 .navigationContainer {
@@ -67,6 +67,14 @@ body {
 .reset-btn,
 .close-btn {
   cursor: pointer;
+}
+
+h3{
+  color: black;
+}
+
+h3 span{
+  color: black;
 }
 
 

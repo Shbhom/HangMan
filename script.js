@@ -94,7 +94,7 @@ const init = function (state) {
 
   // putting selected word
   for (let i = 0; i < select_word.length; i++) {
-    const html = `<p class="word">_</p>`;
+    const html = `<p class="word" style="color:#000000;">_</p>`;
     wordDiv.insertAdjacentHTML('beforeend', html);
   }
 };
