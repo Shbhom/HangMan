@@ -3,7 +3,7 @@
 - [x] basic ui
 - [x] points system
 - [ ] boxes around dashes
-- [ ] add drawing
+- [x] add drawing
 - [ ] responsive
 - [ ] scoreContainer BG
 - [ ] end game card
