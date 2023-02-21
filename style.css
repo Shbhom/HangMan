@@ -7,9 +7,9 @@ body {
 }
 
 .wrapper{
-  width: 380px;
+  width: 360px;
   height: fit-content;
-  padding: 0.1rem 0.2rem;
+  /* padding: 0.1rem 0.2rem; */
 }
 
 .navigationContainer {
@@ -28,8 +28,8 @@ body {
 }
 
 .scoreContainer {
-  width: 5.5rem;
-  height: 3rem;
+  width: 6rem;
+  height: 2.5rem;
   margin-right: 4%;
   display: flex;
   background-color: #FFFFFF;
@@ -37,13 +37,15 @@ body {
 }
 
 .scoreContainer img{
-  width: 40px;
-  height: 40px;
-  margin: 0.4em 0.3em;
+  width: 45px;
+  height: 30px;
+  margin: 0.2em 0.1em;
 }
 
 #gameScore {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+  margin-top: 10px ;
   text-transform: capitalize;
   font-family: 'Broadway', sans-serif;
   color: #754431;
@@ -63,7 +65,7 @@ body {
 }
 
 .reset-btn,
-.notif-btn {
+.close-btn {
   cursor: pointer;
 }
 

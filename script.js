@@ -1,8 +1,6 @@
 'use strict';
 const gameScore = document.querySelector('#gameScore');
 const letterDiv = document.querySelector('.letter-div');
-const hintButton = document.querySelector('.hint-btn');
-const resetButton = document.querySelector('.reset-btn');
 const hintText = document.querySelector('.hint-txt');
 const hangman = document.querySelector('.hangmanContainer');
 const liveSpan = document.querySelector('.lives');
@@ -10,7 +8,10 @@ const wordDiv = document.querySelector('.word-div');
 const notif = document.querySelector('.notif');
 const notifContent = document.querySelector('.notif-content');
 const notifSpan = document.querySelector('.notif-span');
-const playAgain = document.querySelector('.notif-btn');
+const backButton = document.querySelector('.back-btn');
+const resetButton = document.querySelector('.reset-btn');
+const closeButton = document.querySelector('.close-btn');
+// const hangmanLeft = document.querySelector()
 
 // keeping letters using javascript
 // so untill we put html content into letter-div,
@@ -48,13 +49,17 @@ const init = function (state) {
   } else if (state === 'reset') {
     letters.forEach(btn => {
       btn.classList.remove('disabled');
-      hintDiv.classList.add('hidden');
       notif.classList.add('hidden');
+      gameScore.innerText=0;
     });
   }
+  //getting the random word
   select_word = getRandomWord(word_list);
   lives = 5;
-  score=0;
+  score = 0;
+
+  //adding hints after each reload 
+  hintText.textContent = words.get(select_word);
 
   // capturing letters div
   letters = document.querySelectorAll('.alpha');
@@ -74,7 +79,6 @@ const showNotif = function (msg) {
   notif.classList.remove('hidden');
   notifSpan.textContent = select_word;
   notifContent.textContent = `You ${msg}`;
-  // lives = 3;
 };
 
 // decrease life
@@ -140,15 +144,18 @@ letters.forEach(btn => {
   btn.addEventListener('click', letterPress);
 });
 
-
-window.onload(hintText.textContent = words.get(select_word));
-
 // listening to reset btn
 resetButton.addEventListener('click', function () {
   init('reset');
 });
 
+// listening to back button
+backButton.addEventListener('click',()=>{
+  // console.log('back');
+  window.close();
+})
+
 // listening to play again button
-playAgain.addEventListener('click', function () {
-  init('reset');
+closeButton.addEventListener('click', function () {
+  window.close();
 });
