@@ -36,15 +36,15 @@ let score;
 
 const words = new Map([
   ['ambitious', 'Aspiring'],
-  ['Dangerous', 'Hazardous'],
-  ['Enthusiasm', 'Passion'],
-  ['Adventure', 'Expedition'],
-  ['Magnificent', 'Splendid'],
-  ['Captivate', 'Enchant'],
-  ['Spectacular', 'Impressive'],
-  ['Mysterious', 'Cryptic'],
-  ['Fascinating', 'Intriguing'],
-  ['Accomplish', 'Achieve'],
+  ['dangerous', 'Hazardous'],
+  ['enthusiasm', 'Passion'],
+  ['adventure', 'Expedition'],
+  ['magnificent', 'Splendid'],
+  ['captivate', 'Enchant'],
+  ['spectacular', 'Impressive'],
+  ['mysterious', 'Cryptic'],
+  ['fascinating', 'Intriguing'],
+  ['accomplish', 'Achieve'],
 ]);
 
 // making a list of only keys from words
