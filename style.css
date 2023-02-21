@@ -51,6 +51,22 @@ body {
   color: #754431;
 }
 
+.heartContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 6rem;
+  margin-right: 4%;
+}
+
+.heart {
+  width: 30px;
+  height: 30px;
+  background-image: url('./img/heart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .hint-div {
   font-family: 'broadway', sans-serif;
   display: flex;
@@ -103,11 +119,6 @@ body {
   margin-top: 2rem;
   height: 8rem;
 }
-
-/* .hangImgR{
-  margin-top: 2rem;
-  height: 8rem;
-} */
 
 .word-div {
   display: inline-flex;

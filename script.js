@@ -13,6 +13,7 @@ const notifSpan = document.querySelector('.notif-span');
 const backButton = document.querySelector('.back-btn');
 const resetButton = document.querySelector('.reset-btn');
 const closeButton = document.querySelector('.close-btn');
+const heartContainer = document.querySelector('.heartContainer')
 
 //variables
 let letters;
@@ -172,6 +173,16 @@ const letterPress = function () {
     decreaseLife();
   }
   this.classList.add('disabled');
+};
+
+//Function to update the hearts in the remaining lives section
+const updateHearts = function(lives) {
+  heartContainer.innerHTML = '';
+  for(let i = 0; i < lives; i++) {
+    const heart = document.createElement('span');
+    heart.innerHTML = '&hearts;';
+    heartContainer.appendChild(heart);
+  }
 };
 
 //A function to use different images for hangman for differnt values of lives remaining
