@@ -2,8 +2,8 @@
 - [x] working prototype
 - [x] basic ui
 - [x] points system
-- [ ] boxes around dashes
 - [x] add drawing
+- [ ] boxes around dashes
 - [ ] responsive
 - [ ] scoreContainer BG
 - [ ] end game card
