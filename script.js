@@ -13,26 +13,11 @@ const notifSpan = document.querySelector('.notif-span');
 const backButton = document.querySelector('.back-btn');
 const resetButton = document.querySelector('.reset-btn');
 const closeButton = document.querySelector('.close-btn');
-// const hangmanLeft = document.querySelector()
 
-// keeping letters using javascript
-// so untill we put html content into letter-div,
-// we cant capture letters
+//variables
 let letters;
-
 let lives=5;
 let score;
-
-// Ambitious - Aspiring
-// Dangerous - Hazardous
-// Enthusiasm - Passion
-// Adventure - Expedition
-// Magnificent - Splendid
-// Captivate - Enchant
-// Spectacular - Impressive
-// Mysterious - Cryptic
-// Fascinating - Intriguing
-// Accomplish - Achieve
 
 const words = new Map([
   ['ambitious', 'Aspiring'],
@@ -45,7 +30,28 @@ const words = new Map([
   ['mysterious', 'Cryptic'],
   ['fascinating', 'Intriguing'],
   ['accomplish', 'Achieve'],
+  ['jubilant', 'Joyful'],
+  ['impeccable', 'Flawless'],
+  ['magnanimous', 'Generous'],
+  ['thrilling', 'Exciting'],
+  ['thrilling', 'Achieve'],
+  ['vibrant', 'Lively'],
+  ['exquisite', 'Elegant'],
+  ['nostalgia', 'Longing'],
+  ['serenity', 'Tranquility'],
+  ['mesmerize', 'Hypnotize'],
+  ['phenomenal', 'Extaordinary'],
+  ['ingenious', 'Clever'],
+  ['delightful', 'Charming'],
+  ['courageous', 'Valiant'],
+  ['ambiguous', 'Vague'],
+  ['hilarious', 'Amusing'],
+  ['suspicious', 'Dubious'],
+  ['perseverance', 'Persistence'],
+  ['extavagant', 'Lavish'],
+  ['fascinate', 'Captivate'],
 ]);
+
 
 // making a list of only keys from words
 const word_list = [...words.keys()];
@@ -77,7 +83,6 @@ const init = function (state) {
   }
   //getting the random word
   select_word = getRandomWord(word_list);
-  // lives = 5;
   score = 0;
 
   //adding hints after each reload 
