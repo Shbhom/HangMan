@@ -20,7 +20,7 @@ const closeButton = document.querySelector('.close-btn');
 // we cant capture letters
 let letters;
 
-let lives;
+let lives=5;
 let score;
 
 const words = new Map([
@@ -53,11 +53,13 @@ const init = function (state) {
       btn.classList.remove('disabled');
       notif.classList.add('hidden');
       gameScore.innerText=0;
+      lives=5;
+      hangmanImage();
     });
   }
   //getting the random word
   select_word = getRandomWord(word_list);
-  lives = 5;
+  // lives = 5;
   score = 0;
 
   //adding hints after each reload 
@@ -78,19 +80,17 @@ init('start');
 
 // show notification
 const showNotif = function (msg) {
-  const showNotif = function (msg) {
     if (msg === 'lost') {
       setTimeout(function() {
         notif.classList.remove('hidden');
         notifSpan.textContent = select_word;
         notifContent.textContent = `You ${msg}`;
-      }, 3000);
+      }, 1000);
     } else {
       notif.classList.remove('hidden');
       notifSpan.textContent = select_word;
       notifContent.textContent = `You ${msg}`;
     }
-  };
 };
 
 // decrease life
@@ -155,18 +155,24 @@ const letterPress = function () {
 const hangmanImage = function(){
   if(lives===5){
     hangImgL.src = './img/hangman1.png';
+    hangImgR.src = './img/hangingBar.png';
+    hangImgL.classList.remove('hidden');
   }
   else if(lives===4){
     hangImgL.src = './img/hangman2.png';
+    hangImgR.src = './img/hangingBar.png';
   }
   else if(lives===3){
     hangImgL.src = './img/hangman3.png';
+    hangImgR.src = './img/hangingBar.png';
   }
   else if(lives===2){
     hangImgL.src = './img/hangman4.png';
+    hangImgR.src = './img/hangingBar.png';
   }
   else if(lives===1){
     hangImgL.src = './img/hangman5.png';
+    hangImgR.src = './img/hangingBar.png';
   }
   else {
     hangImgL.classList.add('hidden');
