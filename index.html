@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- fonts -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/broadway" rel="stylesheet" />
+    <script defer src="script.js"></script>
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navigationContainer">
+        <button><img src="./img/backBtn.png" alt="" /></button>
+          <div class="scoreContainer">
+            <img src="./img/coinsSymbol.png" alt="" class="gamelogo" />
+            <p id="gameScore">000</p>
+        </div>
+      </div>
+      <div class="word-div"></div>
+      <div class="hangmanContainer">
+        <div class="leftHangmanContainer">
+          <img src="./img/Man.png" alt="" />
+        </div>
+        <div class="rightHangmanContainer">
+          <img src="./img/hangingBar.png" alt="" />
+        </div>
+      </div>
+      <h3>Remaining Lives: <span class="lives">5</span></h3>
+      <div class="hint-div">
+        <p>Words having similar meaning as <span class="hint-txt">Text</span></p>
+      </div>
+      <div class="letter-div"></div>
+    </div>
+    <div class="notif hidden">
+      <h2>Game Over !!</h2>
+      <h3 class="notif-content">You won</h3>
+      <h4>Correct Word: <span class="notif-span"></span></h4>
+      <button class="notif-btn">Play again</button>
+    </div>
+  </body>
+</html>
