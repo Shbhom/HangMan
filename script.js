@@ -1,4 +1,5 @@
 'use strict';
+const gameScore = document.querySelector('#gameScore');
 const letterDiv = document.querySelector('.letter-div');
 const hintButton = document.querySelector('.hint-btn');
 const resetButton = document.querySelector('.reset-btn');
@@ -17,6 +18,7 @@ const playAgain = document.querySelector('.notif-btn');
 let letters;
 
 let lives;
+let score;
 
 const words = new Map([
   ['apple', 'keeps doc away'],
@@ -52,6 +54,7 @@ const init = function (state) {
   }
   select_word = getRandomWord(word_list);
   lives = 5;
+  score=0;
 
   // capturing letters div
   letters = document.querySelectorAll('.alpha');
@@ -77,7 +80,9 @@ const showNotif = function (msg) {
 // decrease life
 const decreaseLife = function () {
   lives--;
-  //   console.log(lives);
+  score--;
+  gameScore.innerText=score;
+  console.log(`score:${score}`);
   liveSpan.textContent = lives;
   if (lives === 0) {
     showNotif('lost');
@@ -117,11 +122,15 @@ const letterPress = function () {
     const indexes_list = getindexes(letter);
     indexes_list.forEach((val, i) => {
       wordDiv.children[val].textContent = this.textContent;
+      score+=3;
+      gameScore.innerText=score;
+      console.log(score);
     });
-    if (checkWord()) showNotif('won');
+    if (checkWord()){
+      showNotif('won')
+    };
   } else {
     decreaseLife();
-    // hangman.innerHTML=
   }
   this.classList.add('disabled');
 };
