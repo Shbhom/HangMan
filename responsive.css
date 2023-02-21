@@ -1,0 +1,28 @@
+/* media queries */
+/* @media screen and (max-width: 375px) and (min-width:360px) {
+    .wrapper {
+        width: 390px;
+        height: 800px;
+    }
+} */
+
+/* @media screen and (max-width: 390px) and (min-width:360px) {
+    .wrapper {
+        width: 390px;
+        height: 844px;
+    }
+}
+
+@media screen and (max-width : 393px) and (min-width : 390px) {
+    .wrapper {
+        width: 393px;
+        height: 851px;
+    }
+}
+
+@media screen and (max-width : 415px) and (min-width : 393px) {
+    .wrapper {
+        width: 414px;
+        height: 896px;
+    }
+} */

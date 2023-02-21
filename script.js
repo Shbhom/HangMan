@@ -3,6 +3,8 @@ const gameScore = document.querySelector('#gameScore');
 const letterDiv = document.querySelector('.letter-div');
 const hintText = document.querySelector('.hint-txt');
 const hangman = document.querySelector('.hangmanContainer');
+const hangImgL = document.querySelector('.hangImgL')
+const hangImgR = document.querySelector('.hangImgR')
 const liveSpan = document.querySelector('.lives');
 const wordDiv = document.querySelector('.word-div');
 const notif = document.querySelector('.notif');
@@ -11,21 +13,45 @@ const notifSpan = document.querySelector('.notif-span');
 const backButton = document.querySelector('.back-btn');
 const resetButton = document.querySelector('.reset-btn');
 const closeButton = document.querySelector('.close-btn');
-// const hangmanLeft = document.querySelector()
 
-// keeping letters using javascript
-// so untill we put html content into letter-div,
-// we cant capture letters
+//variables
 let letters;
-
-let lives;
+let lives = 5;
 let score;
 
 const words = new Map([
-  ['apple', 'keeps doc away'],
-  ['pear', 'pata nahi'],
-  ['pomagranate', 'ananas'],
+  ['ambitious', 'Aspiring'],
+  ['dangerous', 'Hazardous'],
+  ['enthusiasm', 'Passion'],
+  ['adventure', 'Expedition'],
+  ['magnificent', 'Splendid'],
+  ['captivate', 'Enchant'],
+  ['spectacular', 'Impressive'],
+  ['mysterious', 'Cryptic'],
+  ['fascinating', 'Intriguing'],
+  ['accomplish', 'Achieve'],
+  ['jubilant', 'Joyful'],
+  ['impeccable', 'Flawless'],
+  ['magnanimous', 'Generous'],
+  ['thrilling', 'Exciting'],
+  ['thrilling', 'Achieve'],
+  ['vibrant', 'Lively'],
+  ['exquisite', 'Elegant'],
+  ['nostalgia', 'Longing'],
+  ['serenity', 'Tranquility'],
+  ['mesmerize', 'Hypnotize'],
+  ['phenomenal', 'Extaordinary'],
+  ['ingenious', 'Clever'],
+  ['delightful', 'Charming'],
+  ['courageous', 'Valiant'],
+  ['ambiguous', 'Vague'],
+  ['hilarious', 'Amusing'],
+  ['suspicious', 'Dubious'],
+  ['perseverance', 'Persistence'],
+  ['extavagant', 'Lavish'],
+  ['fascinate', 'Captivate'],
 ]);
+
 
 // making a list of only keys from words
 const word_list = [...words.keys()];
@@ -51,11 +77,12 @@ const init = function (state) {
       btn.classList.remove('disabled');
       notif.classList.add('hidden');
       gameScore.innerText = 0;
+      lives = 5;
+      hangmanImage();
     });
   }
   //getting the random word
   select_word = getRandomWord(word_list);
-  lives = 5;
   score = 0;
 
   //adding hints after each reload 
@@ -76,9 +103,17 @@ init('start');
 
 // show notification
 const showNotif = function (msg) {
-  notif.classList.remove('hidden');
-  notifSpan.textContent = select_word;
-  notifContent.textContent = `You ${msg}`;
+  if (msg === 'lost') {
+    setTimeout(function () {
+      notif.classList.remove('hidden');
+      notifSpan.textContent = select_word;
+      notifContent.textContent = `You ${msg}`;
+    }, 2000);
+  } else {
+    notif.classList.remove('hidden');
+    notifSpan.textContent = select_word;
+    notifContent.textContent = `You ${msg}`;
+  }
 };
 
 // decrease life
@@ -86,7 +121,7 @@ const decreaseLife = function () {
   lives--;
   score--;
   gameScore.innerText = score;
-  console.log(`score:${score}`);
+  hangmanImage();
   liveSpan.textContent = lives;
   if (lives === 0) {
     showNotif('lost');
@@ -111,7 +146,7 @@ const getindexes = function (letter) {
 const checkWord = function () {
   let val = true;
   for (let i = 0; i < wordDiv.children.length; i++) {
-    if (wordDiv.children[i].textContent === '____') {
+    if (wordDiv.children[i].textContent === '_') {
       val = false;
     }
   }
@@ -138,6 +173,35 @@ const letterPress = function () {
   }
   this.classList.add('disabled');
 };
+
+//A function to use different images for hangman for differnt values of lives remaining
+const hangmanImage = function () {
+  if (lives === 5) {
+    hangImgL.src = './img/hangman1.png';
+    hangImgR.src = './img/hangingBar.png';
+    hangImgL.classList.remove('hidden');
+  }
+  else if (lives === 4) {
+    hangImgL.src = './img/hangman2.png';
+    hangImgR.src = './img/hangingBar.png';
+  }
+  else if (lives === 3) {
+    hangImgL.src = './img/hangman3.png';
+    hangImgR.src = './img/hangingBar.png';
+  }
+  else if (lives === 2) {
+    hangImgL.src = './img/hangman4.png';
+    hangImgR.src = './img/hangingBar.png';
+  }
+  else if (lives === 1) {
+    hangImgL.src = './img/hangman5.png';
+    hangImgR.src = './img/hangingBar.png';
+  }
+  else {
+    hangImgL.classList.add('hidden');
+    hangImgR.src = './img/hangingMan.png'
+  };
+}
 
 // listening to letter buttons presses
 letters.forEach(btn => {
