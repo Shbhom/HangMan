@@ -6,6 +6,6 @@
 - [x] add more words and synonyms 
 - [ ] boxes around dashes
 - [ ] responsive
-- [ ] scoreContainer BG
-- [ ] end game card
+- [x] scoreContainer BG
+- [x] end game card
 - [ ] lives counter
