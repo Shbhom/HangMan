@@ -45,7 +45,7 @@ const updateHearts = (lives) => {
       continue;
     }
     heart.innerHTML = `
-      <img src="./img/goneLife.png" alt="live" />
+      <img src="./img/GoneLife.png" alt="live" />
     `;
     hearts.appendChild(heart);
   }
