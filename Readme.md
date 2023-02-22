@@ -7,5 +7,5 @@
 - [x] lives counter
 - [x] scoreContainer BG
 - [x] end game card
-- [ ] responsive
+- [x] responsive
 - [ ] boxes around dashes(not gonna work)

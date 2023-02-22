@@ -10,11 +10,15 @@ const wordDiv = document.querySelector('.word-div');
 const notif = document.querySelector('.notifContainer');
 const notifwin = document.querySelector('.notifWin');
 const notifloose = document.querySelector('.notifLoose');
-const notifScore = document.querySelector('.notifScore');
-const notifSpan = document.querySelector('.notif-span');
+const notifScoreW = document.querySelector('.notifScoreW');
+const notifScoreL = document.querySelector('.notifScoreL');
+const notifSpanW = document.querySelector('.notif-spanW');
+const notifSpanL = document.querySelector('.notif-spanL');
 const backButton = document.querySelector('.back-btn');
-const resetButton = document.querySelector('.reset-btn');
-const closeButton = document.querySelector('.close-btn');
+const resetButtonW = document.querySelector('.reset-btnW');
+const resetButtonL = document.querySelector('.reset-btnL');
+const closeButtonW = document.querySelector('.close-btnW');
+const closeButtonL = document.querySelector('.close-btnL');
 
 //variables
 let letters;
@@ -138,17 +142,16 @@ const showNotif = function (msg) {
      setTimeout(function () {
       notif.classList.remove('hidden');
       notifloose.classList.remove('hidden');
-      notifScore.textContent = score.toString().padStart(2, '0');
-      notifSpan.textContent = select_word;
-      // notifContent.textContent = `You ${msg}`;
+      notifScoreL.innerText = score;//.toString();//.padStart(3, '0');
+      console.log(notifScoreL.innerText);
+      notifSpanL.textContent = select_word;
     },100);
   } else {
     notif.classList.remove('hidden');
     notifwin.classList.remove('hidden');
-    notifScore.textContent = score.toString().padStart(3, '0');
-    notifSpan.textContent = select_word;
-    // notifContent.textContent = `You ${msg}`;
-    //window.location.href = "win.html"
+    notifScoreW.innerText = score;//.toString();//.padStart(3, '0');
+    notifSpanW.textContent = select_word;
+    console.log(notifScoreW.textContent);
   }
 };
 
@@ -244,17 +247,19 @@ backButton.addEventListener('click', () => {
   window.close();
 })
 
+resetButtonW.addEventListener('click',()=> {
+  init('reset');
+});
 
-const addButtonListeners = function() {
-  resetButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    init('reset');
-  });
+resetButtonL.addEventListener('click',()=> {
+  init('reset');
+});
 
-  // listening to play again button
-  closeButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.close();
-  });
-};
-addButtonListeners();
+// listening to play again button
+closeButtonW.addEventListener('click',()=> {
+  window.close();
+});
+
+closeButtonL.addEventListener('click',()=> {
+  window.close();
+});
