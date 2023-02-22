@@ -114,6 +114,7 @@ const init = function (state) {
       gameScore.innerText = 0;
       lives = 5;
       hangmanImage();
+      updateHearts(lives);
     });
   }
   //getting the random word
@@ -125,7 +126,6 @@ const init = function (state) {
 
   // capturing letters div
   letters = document.querySelectorAll('.alpha');
-  // liveSpan.textContent = lives;
 
   // putting selected word
   for (let i = 0; i < select_word.length; i++) {
@@ -145,7 +145,7 @@ const showNotif = function (msg) {
       notifScoreL.innerHTML = score;//.toString();//.padStart(3, '0');
       console.log(`notifScoreL.innerText: ${notifScoreL.innerText}`);
       notifSpanL.textContent = select_word;
-    }, 100);
+    }, 1000);
   } else {
     notif.classList.remove('hidden');
     notifwin.classList.remove('hidden');
