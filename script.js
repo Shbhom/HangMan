@@ -7,7 +7,9 @@ const hangImgL = document.querySelector('.hangImgL')
 const hangImgR = document.querySelector('.hangImgR')
 const liveSpan = document.querySelector('.lives');
 const wordDiv = document.querySelector('.word-div');
-const notif = document.querySelector('.notif');
+const notif = document.querySelector('.notifContainer');
+const notifwin = document.querySelector('.notifWin');
+const notifloose = document.querySelector('.notifLoose');
 const notifContent = document.querySelector('.notif-content');
 const notifSpan = document.querySelector('.notif-span');
 const backButton = document.querySelector('.back-btn');
@@ -106,14 +108,17 @@ const showNotif = function (msg) {
   if (msg === 'lost') {
     setTimeout(function () {
       notif.classList.remove('hidden');
+      notifloose.classList.remove('hidden');
+      // notifWin.classList.add('hidden');
       notifSpan.textContent = select_word;
-      notifContent.textContent = `You ${msg}`;
+      // notifContent.textContent = `You ${msg}`;
     }, 2000);
   } else {
     notif.classList.remove('hidden');
-    notifSpan.textContent = select_word;
-    notifContent.textContent = `You ${msg}`;
-    window.location.href = "win.html"
+    notifwin.classList.remove('hidden');
+    // notifSpan.textContent = select_word;
+    // notifContent.textContent = `You ${msg}`;
+    //window.location.href = "win.html"
   }
 };
 
