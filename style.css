@@ -245,6 +245,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .notif h2,
@@ -304,6 +305,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 7%;
 }
 
 .scoreNotifCnotainer {
@@ -362,7 +364,7 @@ h4 {
 }
 
 .hidden {
-  /* display: none; */
+  display: none;
 }
 
 #hearts {
