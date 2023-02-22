@@ -340,4 +340,6 @@ h4 {
   height: 20px;
   background-color: crimson;
   border-radius: 50%;
+  display: grid;
+  place-items: center;
 }

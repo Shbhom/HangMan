@@ -34,11 +34,15 @@ const updateHearts = (lives) => {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     if (i < lives) {
-      heart.textContent = '❤️';
+      heart.innerHTML = `
+        <img src="/img/leftLife.png" alt="live" />
+      `;
       hearts.appendChild(heart);
       continue;
     }
-    heart.textContent = '💛';
+    heart.innerHTML = `
+      <img src="/img/goneLife.png" alt="live" />
+    `;
     hearts.appendChild(heart);
   }
 }
@@ -90,7 +94,7 @@ let select_word;
 
 const init = function (state) {
 
-  updateHearts(lives)
+  updateHearts(lives);
 
   wordDiv.innerHTML = '';
   if (state === 'start') {
