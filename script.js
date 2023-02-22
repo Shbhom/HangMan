@@ -114,6 +114,7 @@ const init = function (state) {
       gameScore.innerText = 0;
       lives = 5;
       hangmanImage();
+      updateHearts(lives);
     });
   }
   //getting the random word
