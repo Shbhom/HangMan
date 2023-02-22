@@ -39,7 +39,7 @@ const updateHearts = (lives) => {
     heart.classList.add('heart');
     if (i < lives) {
       heart.innerHTML = `
-        <img src="/img/leftLife.png" alt="live" />
+        <img src="./img/leftLife.png" alt="live" />
       `;
       hearts.appendChild(heart);
       continue;
