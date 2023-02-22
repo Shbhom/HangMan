@@ -21,6 +21,28 @@ let letters;
 let lives = 5;
 let score;
 
+
+
+const updateHearts = (lives) => {
+  const hearts = document.getElementById('hearts');
+
+  // clear all hearts
+  hearts.innerHTML = '';
+
+  // add hearts
+  for (let i = 0; i < 5; i++) {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    if (i < lives) {
+      heart.textContent = '❤️';
+      hearts.appendChild(heart);
+      continue;
+    }
+    heart.textContent = '💛';
+    hearts.appendChild(heart);
+  }
+}
+
 const words = new Map([
   ['ambitious', 'Aspiring'],
   ['dangerous', 'Hazardous'],
@@ -67,6 +89,9 @@ const getRandomWord = function (list) {
 let select_word;
 
 const init = function (state) {
+
+  updateHearts(lives)
+
   wordDiv.innerHTML = '';
   if (state === 'start') {
     // putting all letters into html
@@ -128,6 +153,7 @@ const decreaseLife = function () {
   score--;
   gameScore.innerText = score;
   hangmanImage();
+  updateHearts(lives);
   liveSpan.textContent = lives;
   if (lives === 0) {
     showNotif('lost');
