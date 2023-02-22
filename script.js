@@ -142,8 +142,8 @@ const showNotif = function (msg) {
      setTimeout(function () {
       notif.classList.remove('hidden');
       notifloose.classList.remove('hidden');
-      notifScoreL.innerText = score;//.toString();//.padStart(3, '0');
-      console.log(notifScoreL.innerText);
+      notifScoreL.innerHTML = score;//.toString();//.padStart(3, '0');
+      console.log(`notifScoreL.innerText: ${notifScoreL.innerText}`);
       notifSpanL.textContent = select_word;
     },100);
   } else {
@@ -151,7 +151,7 @@ const showNotif = function (msg) {
     notifwin.classList.remove('hidden');
     notifScoreW.innerText = score;//.toString();//.padStart(3, '0');
     notifSpanW.textContent = select_word;
-    console.log(notifScoreW.textContent);
+    console.log(`notifScoreW.textContent: ${notifScoreW.textContent}`);
   }
 };
 

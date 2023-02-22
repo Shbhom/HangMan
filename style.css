@@ -338,6 +338,9 @@
 
     color: #AD5B00;
   }
+  .notifScoreL{
+    font-size: 25rem;
+  }
 
   .notifLoose h2,
   h3,
@@ -388,4 +391,7 @@
     place-items: center;
   }
 
+}
+.notifScoreL{
+  font-size: 25px;
 }
