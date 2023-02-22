@@ -80,7 +80,7 @@ const words = new Map([
   ['hilarious', 'Amusing'],
   ['suspicious', 'Dubious'],
   ['perseverance', 'Persistence'],
-  ['extavagant', 'Lavish'],
+  ['extravagant', 'Lavish'],
   ['fascinate', 'Captivate'],
 ]);
 
