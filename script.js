@@ -139,13 +139,13 @@ init('start');
 // show notification
 const showNotif = function (msg) {
   if (msg === 'lost') {
-     setTimeout(function () {
+    setTimeout(function () {
       notif.classList.remove('hidden');
       notifloose.classList.remove('hidden');
       notifScoreL.innerHTML = score;//.toString();//.padStart(3, '0');
       console.log(`notifScoreL.innerText: ${notifScoreL.innerText}`);
       notifSpanL.textContent = select_word;
-    },100);
+    }, 100);
   } else {
     notif.classList.remove('hidden');
     notifwin.classList.remove('hidden');
@@ -157,8 +157,14 @@ const showNotif = function (msg) {
 
 // decrease life
 const decreaseLife = function () {
+  if (score == 0) {
+    score = 0;
+  }
+  else {
+    score--;
+
+  }
   lives--;
-  score--;
   gameScore.innerText = score;
   hangmanImage();
   updateHearts(lives);
@@ -196,7 +202,7 @@ const checkWord = function () {
 // letters event listener function
 const letterPress = function () {
   const letter = this.textContent.toLowerCase();
-
+  // letter.style.backgroundColor = 'green';
   if (select_word.includes(letter)) {
     const indexes_list = getindexes(letter);
     indexes_list.forEach((val, i) => {
@@ -212,6 +218,7 @@ const letterPress = function () {
     decreaseLife();
   }
   this.classList.add('disabled');
+
   // this.classList.remove('alpha');
 };
 
@@ -247,19 +254,19 @@ backButton.addEventListener('click', () => {
   window.close();
 })
 
-resetButtonW.addEventListener('click',()=> {
+resetButtonW.addEventListener('click', () => {
   init('reset');
 });
 
-resetButtonL.addEventListener('click',()=> {
+resetButtonL.addEventListener('click', () => {
   init('reset');
 });
 
 // listening to play again button
-closeButtonW.addEventListener('click',()=> {
+closeButtonW.addEventListener('click', () => {
   window.close();
 });
 
-closeButtonL.addEventListener('click',()=> {
+closeButtonL.addEventListener('click', () => {
   window.close();
 });

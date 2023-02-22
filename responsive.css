@@ -241,10 +241,10 @@
 
     }
 
-    .notif h2,
+    .notifContainer h2,
     h3,
     h4 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-family: Broadway;
     }
 
@@ -328,13 +328,6 @@
         text-transform: capitalize;
 
         color: #AD5B00;
-    }
-
-    .notifLoose h2,
-    h3,
-    h4 {
-        font-size: 1.5rem;
-        font-family: Broadway;
     }
 
     .notifBtn {
