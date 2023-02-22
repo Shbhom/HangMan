@@ -179,12 +179,10 @@
   width: 38.97px;
   height: 38.97px;
   /* height: 8.048%; */
-  background: radial-gradient(
-    109.13% 109.13% at 50.66% 7.54%,
-    #d6af90 9%,
-    #cc9c75 59%,
-    #bc7d4a 95%
-  );
+  background: radial-gradient(109.13% 109.13% at 50.66% 7.54%,
+      #d6af90 9%,
+      #cc9c75 59%,
+      #bc7d4a 95%);
   /* background: #ffe5b4; */
   border: none;
   border-radius: 4px;
@@ -364,7 +362,7 @@ h4 {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
 }
 
 #hearts {
