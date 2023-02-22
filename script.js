@@ -138,7 +138,7 @@ const showNotif = function (msg) {
      setTimeout(function () {
       notif.classList.remove('hidden');
       notifloose.classList.remove('hidden');
-      notifScore.textContent = score.toString().padStart(3, '0');
+      notifScore.textContent = score.toString().padStart(2, '0');
       notifSpan.textContent = select_word;
       // notifContent.textContent = `You ${msg}`;
     },100);
@@ -209,6 +209,7 @@ const letterPress = function () {
     decreaseLife();
   }
   this.classList.add('disabled');
+  // this.classList.remove('alpha');
 };
 
 //A function to use different images for hangman for differnt values of lives remaining
