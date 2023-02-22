@@ -4,8 +4,8 @@
 - [x] points system
 - [x] add drawing
 - [x] add more words and synonyms 
-- [ ] boxes around dashes
-- [ ] responsive
+- [x] lives counter
 - [x] scoreContainer BG
 - [x] end game card
-- [ ] lives counter
+- [ ] responsive
+- [ ] boxes around dashes(not gonna work)
