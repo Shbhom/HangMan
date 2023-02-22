@@ -7,7 +7,9 @@ const hangImgL = document.querySelector('.hangImgL')
 const hangImgR = document.querySelector('.hangImgR')
 const liveSpan = document.querySelector('.lives');
 const wordDiv = document.querySelector('.word-div');
-const notif = document.querySelector('.notif');
+const notif = document.querySelector('.notifContainer');
+const notifwin = document.querySelector('.notifWin');
+const notifloose = document.querySelector('.notifLoose');
 const notifContent = document.querySelector('.notif-content');
 const notifSpan = document.querySelector('.notif-span');
 const backButton = document.querySelector('.back-btn');
@@ -18,6 +20,32 @@ const closeButton = document.querySelector('.close-btn');
 let letters;
 let lives = 5;
 let score;
+
+
+
+const updateHearts = (lives) => {
+  const hearts = document.getElementById('hearts');
+
+  // clear all hearts
+  hearts.innerHTML = '';
+
+  // add hearts
+  for (let i = 0; i < 5; i++) {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    if (i < lives) {
+      heart.innerHTML = `
+        <img src="/img/leftLife.png" alt="live" />
+      `;
+      hearts.appendChild(heart);
+      continue;
+    }
+    heart.innerHTML = `
+      <img src="/img/goneLife.png" alt="live" />
+    `;
+    hearts.appendChild(heart);
+  }
+}
 
 const words = new Map([
   ['ambitious', 'Aspiring'],
@@ -65,6 +93,9 @@ const getRandomWord = function (list) {
 let select_word;
 
 const init = function (state) {
+
+  updateHearts(lives);
+
   wordDiv.innerHTML = '';
   if (state === 'start') {
     // putting all letters into html
@@ -106,14 +137,17 @@ const showNotif = function (msg) {
   if (msg === 'lost') {
     setTimeout(function () {
       notif.classList.remove('hidden');
+      notifloose.classList.remove('hidden');
+      // notifWin.classList.add('hidden');
       notifSpan.textContent = select_word;
-      notifContent.textContent = `You ${msg}`;
+      // notifContent.textContent = `You ${msg}`;
     }, 2000);
   } else {
     notif.classList.remove('hidden');
-    notifSpan.textContent = select_word;
-    notifContent.textContent = `You ${msg}`;
-    window.location.href = "win.html"
+    notifwin.classList.remove('hidden');
+    // notifSpan.textContent = select_word;
+    // notifContent.textContent = `You ${msg}`;
+    //window.location.href = "win.html"
   }
 };
 
@@ -123,6 +157,7 @@ const decreaseLife = function () {
   score--;
   gameScore.innerText = score;
   hangmanImage();
+  updateHearts(lives);
   liveSpan.textContent = lives;
   if (lives === 0) {
     showNotif('lost');

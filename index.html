@@ -20,6 +20,7 @@
     <div class="wrapper">
       <div class="navigationContainer">
         <button class="back-btn"><img src="./img/backBtn.png" alt="" /></button>
+        <div id="hearts"></div>
         <div class="scoreContainer">
           <img src="./img/coinsSymbol.png" alt="" class="gamelogo" />
           <p id="gameScore">000</p>
@@ -65,12 +66,29 @@
         </div>
       </div>
     </div> -->
-    <div class="notifContainerLoose hidden">
+    <div class="notifContainer hidden">
+      <div class="notifWin hidden">
+        <h2>Game Over !!</h2>
+        <h3 class="notif-content">You won</h3>
+        <h4>Correct Word: <span class="notif-span"></span></h4>
+        <br />
+        <br />
+        <div class="notifBtn">
+          <button class="close-btn">
+            <img src="./img/home.png" alt="" />
+          </button>
+          <button class="reset-btn">
+            <img src="./img/restart.png" alt="" />
+          </button>
+        </div>
+      </div>
+
       <div class="notifLoose hidden">
         <h2>Game Over !!</h2>
         <h3 class="notif-content">You Loose</h3>
         <h3>Hang to death</h3>
-        <h4>Better luck next time <span class="notif-span"></span></h4>
+        <h4>Better luck next time</h4>
+        <h4>Correct Word: <span class="notif-span"></span></h4>
         <br />
         <br />
         <div class="scoreNotifCnotainer">
