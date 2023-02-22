@@ -274,6 +274,19 @@ h4 {
 }
 
 /* loose screen */
+.notifContainerLoose {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./img/background.png);
+}
 
 .notifLoose {
   position: fixed;
@@ -296,6 +309,35 @@ h4 {
   justify-content: center;
   align-items: center;
 
+}
+
+.scoreNotifCnotainer {
+  width: 13.14rem;
+  height: 4.3rem;
+  background: linear-gradient(0deg, #EDD6B9 0%, #D4B492 99.95%);
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.notifCoin {
+  width: 4.5rem;
+  height: 3rem;
+}
+
+.notifScore {
+  font-size: 2.5rem;
+  ;
+  font-weight: 400;
+  font-family: Broadway;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: #AD5B00;
 }
 
 .notifLoose h2,
