@@ -10,7 +10,7 @@ const wordDiv = document.querySelector('.word-div');
 const notif = document.querySelector('.notifContainer');
 const notifwin = document.querySelector('.notifWin');
 const notifloose = document.querySelector('.notifLoose');
-const notifContent = document.querySelector('.notif-content');
+const notifScore = document.querySelector('.notifScore');
 const notifSpan = document.querySelector('.notif-span');
 const backButton = document.querySelector('.back-btn');
 const resetButton = document.querySelector('.reset-btn');
@@ -138,10 +138,11 @@ const showNotif = function (msg) {
     setTimeout(function () {
       notif.classList.remove('hidden');
       notifloose.classList.remove('hidden');
+      notifScore.textContent=score;
       // notifWin.classList.add('hidden');
-      notifSpan.textContent = select_word;
+      // notifSpan.textContent = select_word;
       // notifContent.textContent = `You ${msg}`;
-    }, 100);
+    }, 1000);
   } else {
     notif.classList.remove('hidden');
     notifwin.classList.remove('hidden');
