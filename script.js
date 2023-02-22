@@ -135,18 +135,18 @@ init('start');
 // show notification
 const showNotif = function (msg) {
   if (msg === 'lost') {
-    setTimeout(function () {
+     setTimeout(function () {
       notif.classList.remove('hidden');
       notifloose.classList.remove('hidden');
-      notifScore.textContent=score;
-      // notifWin.classList.add('hidden');
-      // notifSpan.textContent = select_word;
+      notifScore.textContent = score.toString().padStart(3, '0');
+      notifSpan.textContent = select_word;
       // notifContent.textContent = `You ${msg}`;
-    }, 1000);
+    },100);
   } else {
     notif.classList.remove('hidden');
     notifwin.classList.remove('hidden');
-    // notifSpan.textContent = select_word;
+    notifScore.textContent = score.toString().padStart(3, '0');
+    notifSpan.textContent = select_word;
     // notifContent.textContent = `You ${msg}`;
     //window.location.href = "win.html"
   }
@@ -244,19 +244,22 @@ const hangmanImage = function () {
 letters.forEach(btn => {
   btn.addEventListener('click', letterPress);
 });
-
-// listening to reset btn
-resetButton.addEventListener('click', function () {
-  init('reset');
-});
-
 // listening to back button
 backButton.addEventListener('click', () => {
-  // console.log('back');
   window.close();
 })
 
-// listening to play again button
-closeButton.addEventListener('click', function () {
-  window.close();
-});
+
+const addButtonListeners = function() {
+  resetButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    init('reset');
+  });
+
+  // listening to play again button
+  closeButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.close();
+  });
+};
+addButtonListeners();
