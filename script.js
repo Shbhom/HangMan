@@ -215,24 +215,18 @@ const letterPress = function () {
 const hangmanImage = function () {
   if (lives === 5) {
     hangImgL.src = './img/hangman1.png';
-    hangImgR.src = './img/hangingBar.png';
-    hangImgL.classList.remove('hidden');
   }
   else if (lives === 4) {
     hangImgL.src = './img/hangman2.png';
-    hangImgR.src = './img/hangingBar.png';
   }
   else if (lives === 3) {
     hangImgL.src = './img/hangman3.png';
-    hangImgR.src = './img/hangingBar.png';
   }
   else if (lives === 2) {
     hangImgL.src = './img/hangman4.png';
-    hangImgR.src = './img/hangingBar.png';
   }
   else if (lives === 1) {
     hangImgL.src = './img/hangman5.png';
-    hangImgR.src = './img/hangingBar.png';
   }
   else {
     hangImgL.classList.add('hidden');
