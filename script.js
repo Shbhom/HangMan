@@ -121,7 +121,7 @@ const init = function (state) {
 
   // capturing letters div
   letters = document.querySelectorAll('.alpha');
-  liveSpan.textContent = lives;
+  // liveSpan.textContent = lives;
 
   // putting selected word
   for (let i = 0; i < select_word.length; i++) {
@@ -141,7 +141,7 @@ const showNotif = function (msg) {
       // notifWin.classList.add('hidden');
       notifSpan.textContent = select_word;
       // notifContent.textContent = `You ${msg}`;
-    }, 2000);
+    }, 100);
   } else {
     notif.classList.remove('hidden');
     notifwin.classList.remove('hidden');
@@ -158,7 +158,7 @@ const decreaseLife = function () {
   gameScore.innerText = score;
   hangmanImage();
   updateHearts(lives);
-  liveSpan.textContent = lives;
+  // liveSpan.textContent = lives;
   if (lives === 0) {
     showNotif('lost');
   }

@@ -1,28 +1,1905 @@
 /* media queries */
-/* @media screen and (max-width: 375px) and (min-width:360px) {
+@media screen and (max-width: 375px) {
     .wrapper {
-        width: 390px;
-        height: 800px;
+        width: 100%;
+        height: 100%;
+        width: 375px;
+        height: 667px;
+        background: url(./img/Hangman\ bg.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
-} */
 
-/* @media screen and (max-width: 390px) and (min-width:360px) {
+    .navigationContainer {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        /* justify-content: space-between; */
+        /* border: 2px solid green; */
+        align-items: center;
+    }
+
+    .navigationContainer button {
+        margin-left: 4%;
+        background: none;
+        border: none;
+        outline: none;
+        /* margin-top: 2.1%; */
+    }
+
+    .scoreContainer {
+        width: 10.6rem;
+        height: 3rem;
+        margin-right: 4%;
+        display: flex;
+        background-color: #ffffff;
+        /* margin-top: 4.875%; */
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .scoreContainer img {
+        width: 3.4rem;
+        height: 2.3rem;
+    }
+
+    #gameScore {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        font-family: "Broadway", sans-serif;
+        color: #754431;
+    }
+
+    .hangmanContainer {
+        width: 100%;
+        /* margin: 2rem 1rem 1rem 1rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: 1px solid green; */
+        height: 30.375%;
+    }
+
+    .leftHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid orange; */
+    }
+
+    .hangImgL {
+        width: 4.551rem;
+        height: 9.7rem;
+    }
+
+    .rightHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* border: 2px solid blue; */
+    }
+
+    .rightHangmanContainer img {
+        height: 100%;
+        width: 15.6rem;
+    }
+
+    .hint-div {
+        font-family: "broadway", sans-serif;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        /* margin-top: 2%; */
+    }
+
+    .hint-div p {
+        font-weight: 400;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .hint-txt {
+        font-weight: 700;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+    }
+
+    .reset-btn,
+    .close-btn {
+        cursor: pointer;
+    }
+
+    .midContainer {
+        width: 100%;
+        /* border: 2px solid red; */
+        height: 12vh;
+        margin-top: 2%;
+    }
+
+    .word-div {
+        display: flex;
+        font-family: "broadway", sans-serif;
+        color: black;
+        margin-top: 4%;
+        color: black;
+    }
+
+    .word {
+        /* margin-right: 1.5rem; */
+        font-size: 2.3rem;
+    }
+
+    .remainingLives,
+    .lives {
+        color: #8e4a1b;
+        font-weight: 400;
+        font-family: "satoshi", sans-serif;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .lives {
+        font-weight: 700;
+    }
+
+    .letter-div {
+        height: 31.44%;
+        width: 89.11%;
+        /* margin-left: 10%; */
+        margin-top: 8%;
+        margin-left: 5.045%;
+        font-size: 1.5rem;
+        /* border: 2px solid red; */
+    }
+
+    .alpha {
+        width: 38.97px;
+        height: 38.97px;
+        /* height: 8.048%; */
+        background: radial-gradient(109.13% 109.13% at 50.66% 7.54%,
+                #d6af90 9%,
+                #cc9c75 59%,
+                #bc7d4a 95%);
+        /* background: #ffe5b4; */
+        border: none;
+        border-radius: 4px;
+        margin: 6px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .alpha:hover {
+        background-color: #e75480;
+        border: none;
+    }
+
+    .disabled {
+        pointer-events: none;
+        background-color: darkgray;
+    }
+
+    .word-div {
+        display: inline-flex;
+        font-family: "broadway", sans-serif;
+    }
+
+    .word {
+        margin-right: 1.5rem;
+    }
+
+    .notifContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    /* win screen */
+    .notifWin {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/winScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .notif h2,
+    h3,
+    h4 {
+        font-size: 2rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    /* loose screen */
+    .notifContainerLoose {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    .notifLoose {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/lossScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7%;
+    }
+
+    .scoreNotifCnotainer {
+        width: 13.14rem;
+        height: 4.3rem;
+        background: linear-gradient(0deg, #EDD6B9 0%, #D4B492 99.95%);
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .notifCoin {
+        width: 4.5rem;
+        height: 3rem;
+    }
+
+    .notifScore {
+        font-size: 2.5rem;
+        ;
+        font-weight: 400;
+        font-family: Broadway;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #AD5B00;
+    }
+
+    .notifLoose h2,
+    h3,
+    h4 {
+        font-size: 1.5rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .blur {
+        filter: blur(2px);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #hearts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap: 4px;
+        margin-right: auto;
+        margin-left: 16px;
+    }
+
+    .hearts .heart {
+        width: 20px;
+        height: 20px;
+        background-color: crimson;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 390px) and (min-width:360px) {
     .wrapper {
-        width: 390px;
-        height: 844px;
+        width: 100%;
+        height: 100%;
+        width: 393px;
+        height: 851px;
+        background: url(./img/Hangman\ bg.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .navigationContainer {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        /* justify-content: space-between; */
+        /* border: 2px solid green; */
+        align-items: center;
+    }
+
+    .navigationContainer button {
+        margin-left: 4%;
+        background: none;
+        border: none;
+        outline: none;
+        /* margin-top: 2.1%; */
+    }
+
+    .scoreContainer {
+        width: 10.6rem;
+        height: 3rem;
+        margin-right: 4%;
+        display: flex;
+        background-color: #ffffff;
+        /* margin-top: 4.875%; */
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .scoreContainer img {
+        width: 3.4rem;
+        height: 2.3rem;
+    }
+
+    #gameScore {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        font-family: "Broadway", sans-serif;
+        color: #754431;
+    }
+
+    .hangmanContainer {
+        width: 100%;
+        /* margin: 2rem 1rem 1rem 1rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: 1px solid green; */
+        height: 30.375%;
+    }
+
+    .leftHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid orange; */
+    }
+
+    .hangImgL {
+        width: 4.551rem;
+        height: 9.7rem;
+    }
+
+    .rightHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* border: 2px solid blue; */
+    }
+
+    .rightHangmanContainer img {
+        height: 100%;
+        width: 15.6rem;
+    }
+
+    .hint-div {
+        font-family: "broadway", sans-serif;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        /* margin-top: 2%; */
+    }
+
+    .hint-div p {
+        font-weight: 400;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .hint-txt {
+        font-weight: 700;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+    }
+
+    .reset-btn,
+    .close-btn {
+        cursor: pointer;
+    }
+
+    .midContainer {
+        width: 100%;
+        /* border: 2px solid red; */
+        height: 12vh;
+        margin-top: 2%;
+    }
+
+    .word-div {
+        display: flex;
+        font-family: "broadway", sans-serif;
+        color: black;
+        margin-top: 4%;
+        color: black;
+    }
+
+    .word {
+        /* margin-right: 1.5rem; */
+        font-size: 2.3rem;
+    }
+
+    .remainingLives,
+    .lives {
+        color: #8e4a1b;
+        font-weight: 400;
+        font-family: "satoshi", sans-serif;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .lives {
+        font-weight: 700;
+    }
+
+    .letter-div {
+        height: 31.44%;
+        width: 89.11%;
+        /* margin-left: 10%; */
+        margin-top: 8%;
+        margin-left: 5.045%;
+        font-size: 1.5rem;
+        /* border: 2px solid red; */
+    }
+
+    .alpha {
+        width: 38.97px;
+        height: 38.97px;
+        /* height: 8.048%; */
+        background: radial-gradient(109.13% 109.13% at 50.66% 7.54%,
+                #d6af90 9%,
+                #cc9c75 59%,
+                #bc7d4a 95%);
+        /* background: #ffe5b4; */
+        border: none;
+        border-radius: 4px;
+        margin: 6px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .alpha:hover {
+        background-color: #e75480;
+        border: none;
+    }
+
+    .disabled {
+        pointer-events: none;
+        background-color: darkgray;
+    }
+
+    .word-div {
+        display: inline-flex;
+        font-family: "broadway", sans-serif;
+    }
+
+    .word {
+        margin-right: 1.5rem;
+    }
+
+    .notifContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    /* win screen */
+    .notifWin {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/winScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .notif h2,
+    h3,
+    h4 {
+        font-size: 2rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    /* loose screen */
+    .notifContainerLoose {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    .notifLoose {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/lossScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7%;
+    }
+
+    .scoreNotifCnotainer {
+        width: 13.14rem;
+        height: 4.3rem;
+        background: linear-gradient(0deg, #EDD6B9 0%, #D4B492 99.95%);
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .notifCoin {
+        width: 4.5rem;
+        height: 3rem;
+    }
+
+    .notifScore {
+        font-size: 2.5rem;
+        ;
+        font-weight: 400;
+        font-family: Broadway;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #AD5B00;
+    }
+
+    .notifLoose h2,
+    h3,
+    h4 {
+        font-size: 1.5rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .blur {
+        filter: blur(2px);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #hearts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap: 4px;
+        margin-right: auto;
+        margin-left: 16px;
+    }
+
+    .hearts .heart {
+        width: 20px;
+        height: 20px;
+        background-color: crimson;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
     }
 }
 
 @media screen and (max-width : 393px) and (min-width : 390px) {
     .wrapper {
-        width: 393px;
-        height: 851px;
+        width: 100%;
+        height: 100%;
+        width: 390px;
+        height: 844px;
+        background: url(./img/Hangman\ bg.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .navigationContainer {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        /* justify-content: space-between; */
+        /* border: 2px solid green; */
+        align-items: center;
+    }
+
+    .navigationContainer button {
+        margin-left: 4%;
+        background: none;
+        border: none;
+        outline: none;
+        /* margin-top: 2.1%; */
+    }
+
+    .scoreContainer {
+        width: 10.6rem;
+        height: 3rem;
+        margin-right: 4%;
+        display: flex;
+        background-color: #ffffff;
+        /* margin-top: 4.875%; */
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .scoreContainer img {
+        width: 3.4rem;
+        height: 2.3rem;
+    }
+
+    #gameScore {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        font-family: "Broadway", sans-serif;
+        color: #754431;
+    }
+
+    .hangmanContainer {
+        width: 100%;
+        /* margin: 2rem 1rem 1rem 1rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: 1px solid green; */
+        height: 30.375%;
+    }
+
+    .leftHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid orange; */
+    }
+
+    .hangImgL {
+        width: 4.551rem;
+        height: 9.7rem;
+    }
+
+    .rightHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* border: 2px solid blue; */
+    }
+
+    .rightHangmanContainer img {
+        height: 100%;
+        width: 15.6rem;
+    }
+
+    .hint-div {
+        font-family: "broadway", sans-serif;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        /* margin-top: 2%; */
+    }
+
+    .hint-div p {
+        font-weight: 400;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .hint-txt {
+        font-weight: 700;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+    }
+
+    .reset-btn,
+    .close-btn {
+        cursor: pointer;
+    }
+
+    .midContainer {
+        width: 100%;
+        /* border: 2px solid red; */
+        height: 12vh;
+        margin-top: 2%;
+    }
+
+    .word-div {
+        display: flex;
+        font-family: "broadway", sans-serif;
+        color: black;
+        margin-top: 4%;
+        color: black;
+    }
+
+    .word {
+        /* margin-right: 1.5rem; */
+        font-size: 2.3rem;
+    }
+
+    .remainingLives,
+    .lives {
+        color: #8e4a1b;
+        font-weight: 400;
+        font-family: "satoshi", sans-serif;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .lives {
+        font-weight: 700;
+    }
+
+    .letter-div {
+        height: 31.44%;
+        width: 89.11%;
+        /* margin-left: 10%; */
+        margin-top: 8%;
+        margin-left: 5.045%;
+        font-size: 1.5rem;
+        /* border: 2px solid red; */
+    }
+
+    .alpha {
+        width: 38.97px;
+        height: 38.97px;
+        /* height: 8.048%; */
+        background: radial-gradient(109.13% 109.13% at 50.66% 7.54%,
+                #d6af90 9%,
+                #cc9c75 59%,
+                #bc7d4a 95%);
+        /* background: #ffe5b4; */
+        border: none;
+        border-radius: 4px;
+        margin: 6px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .alpha:hover {
+        background-color: #e75480;
+        border: none;
+    }
+
+    .disabled {
+        pointer-events: none;
+        background-color: darkgray;
+    }
+
+    .word-div {
+        display: inline-flex;
+        font-family: "broadway", sans-serif;
+    }
+
+    .word {
+        margin-right: 1.5rem;
+    }
+
+    .notifContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    /* win screen */
+    .notifWin {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/winScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .notif h2,
+    h3,
+    h4 {
+        font-size: 2rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    /* loose screen */
+    .notifContainerLoose {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    .notifLoose {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/lossScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7%;
+    }
+
+    .scoreNotifCnotainer {
+        width: 13.14rem;
+        height: 4.3rem;
+        background: linear-gradient(0deg, #EDD6B9 0%, #D4B492 99.95%);
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .notifCoin {
+        width: 4.5rem;
+        height: 3rem;
+    }
+
+    .notifScore {
+        font-size: 2.5rem;
+        ;
+        font-weight: 400;
+        font-family: Broadway;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #AD5B00;
+    }
+
+    .notifLoose h2,
+    h3,
+    h4 {
+        font-size: 1.5rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .blur {
+        filter: blur(2px);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #hearts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap: 4px;
+        margin-right: auto;
+        margin-left: 16px;
+    }
+
+    .hearts .heart {
+        width: 20px;
+        height: 20px;
+        background-color: crimson;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
     }
 }
 
 @media screen and (max-width : 415px) and (min-width : 393px) {
     .wrapper {
+        width: 100%;
+        height: 100%;
         width: 414px;
         height: 896px;
+        background: url(./img/Hangman\ bg.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
-} */
+
+    .navigationContainer {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        /* justify-content: space-between; */
+        /* border: 2px solid green; */
+        align-items: center;
+    }
+
+    .navigationContainer button {
+        margin-left: 4%;
+        background: none;
+        border: none;
+        outline: none;
+        /* margin-top: 2.1%; */
+    }
+
+    .scoreContainer {
+        width: 10.6rem;
+        height: 3rem;
+        margin-right: 4%;
+        display: flex;
+        background-color: #ffffff;
+        /* margin-top: 4.875%; */
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .scoreContainer img {
+        width: 3.4rem;
+        height: 2.3rem;
+    }
+
+    #gameScore {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        font-family: "Broadway", sans-serif;
+        color: #754431;
+    }
+
+    .hangmanContainer {
+        width: 100%;
+        /* margin: 2rem 1rem 1rem 1rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: 1px solid green; */
+        height: 30.375%;
+    }
+
+    .leftHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid orange; */
+    }
+
+    .hangImgL {
+        width: 4.551rem;
+        height: 9.7rem;
+    }
+
+    .rightHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* border: 2px solid blue; */
+    }
+
+    .rightHangmanContainer img {
+        height: 100%;
+        width: 15.6rem;
+    }
+
+    .hint-div {
+        font-family: "broadway", sans-serif;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        /* margin-top: 2%; */
+    }
+
+    .hint-div p {
+        font-weight: 400;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .hint-txt {
+        font-weight: 700;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+    }
+
+    .reset-btn,
+    .close-btn {
+        cursor: pointer;
+    }
+
+    .midContainer {
+        width: 100%;
+        /* border: 2px solid red; */
+        height: 12vh;
+        margin-top: 2%;
+    }
+
+    .word-div {
+        display: flex;
+        font-family: "broadway", sans-serif;
+        color: black;
+        margin-top: 4%;
+        color: black;
+    }
+
+    .word {
+        /* margin-right: 1.5rem; */
+        font-size: 2.3rem;
+    }
+
+    .remainingLives,
+    .lives {
+        color: #8e4a1b;
+        font-weight: 400;
+        font-family: "satoshi", sans-serif;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .lives {
+        font-weight: 700;
+    }
+
+    .letter-div {
+        height: 31.44%;
+        width: 89.11%;
+        /* margin-left: 10%; */
+        margin-top: 8%;
+        margin-left: 5.045%;
+        font-size: 1.5rem;
+        /* border: 2px solid red; */
+    }
+
+    .alpha {
+        width: 38.97px;
+        height: 38.97px;
+        /* height: 8.048%; */
+        background: radial-gradient(109.13% 109.13% at 50.66% 7.54%,
+                #d6af90 9%,
+                #cc9c75 59%,
+                #bc7d4a 95%);
+        /* background: #ffe5b4; */
+        border: none;
+        border-radius: 4px;
+        margin: 6px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .alpha:hover {
+        background-color: #e75480;
+        border: none;
+    }
+
+    .disabled {
+        pointer-events: none;
+        background-color: darkgray;
+    }
+
+    .word-div {
+        display: inline-flex;
+        font-family: "broadway", sans-serif;
+    }
+
+    .word {
+        margin-right: 1.5rem;
+    }
+
+    .notifContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    /* win screen */
+    .notifWin {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/winScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .notif h2,
+    h3,
+    h4 {
+        font-size: 2rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    /* loose screen */
+    .notifContainerLoose {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    .notifLoose {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/lossScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7%;
+    }
+
+    .scoreNotifCnotainer {
+        width: 13.14rem;
+        height: 4.3rem;
+        background: linear-gradient(0deg, #EDD6B9 0%, #D4B492 99.95%);
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .notifCoin {
+        width: 4.5rem;
+        height: 3rem;
+    }
+
+    .notifScore {
+        font-size: 2.5rem;
+        ;
+        font-weight: 400;
+        font-family: Broadway;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #AD5B00;
+    }
+
+    .notifLoose h2,
+    h3,
+    h4 {
+        font-size: 1.5rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .blur {
+        filter: blur(2px);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #hearts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap: 4px;
+        margin-right: auto;
+        margin-left: 16px;
+    }
+
+    .hearts .heart {
+        width: 20px;
+        height: 20px;
+        background-color: crimson;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width : 1440px) and (min-width : 415px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        width: 1440px;
+        height: 3120px;
+        background: url(./img/Hangman\ bg.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .navigationContainer {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        /* justify-content: space-between; */
+        /* border: 2px solid green; */
+        align-items: center;
+    }
+
+    .navigationContainer button {
+        margin-left: 4%;
+        background: none;
+        border: none;
+        outline: none;
+        /* margin-top: 2.1%; */
+    }
+
+    .scoreContainer {
+        width: 10.6rem;
+        height: 3rem;
+        margin-right: 4%;
+        display: flex;
+        background-color: #ffffff;
+        /* margin-top: 4.875%; */
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .scoreContainer img {
+        width: 3.4rem;
+        height: 2.3rem;
+    }
+
+    #gameScore {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        font-family: "Broadway", sans-serif;
+        color: #754431;
+    }
+
+    .hangmanContainer {
+        width: 100%;
+        /* margin: 2rem 1rem 1rem 1rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: 1px solid green; */
+        height: 30.375%;
+    }
+
+    .leftHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid orange; */
+    }
+
+    .hangImgL {
+        width: 4.551rem;
+        height: 9.7rem;
+    }
+
+    .rightHangmanContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* border: 2px solid blue; */
+    }
+
+    .rightHangmanContainer img {
+        height: 100%;
+        width: 15.6rem;
+    }
+
+    .hint-div {
+        font-family: "broadway", sans-serif;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-left: 5%;
+        /* margin-top: 2%; */
+    }
+
+    .hint-div p {
+        font-weight: 400;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .hint-txt {
+        font-weight: 700;
+        color: #8e4a1b;
+        font-family: "Satoshi";
+        font-style: normal;
+        font-size: 1.4rem;
+    }
+
+    .reset-btn,
+    .close-btn {
+        cursor: pointer;
+    }
+
+    .midContainer {
+        width: 100%;
+        /* border: 2px solid red; */
+        height: 12vh;
+        margin-top: 2%;
+    }
+
+    .word-div {
+        display: flex;
+        font-family: "broadway", sans-serif;
+        color: black;
+        margin-top: 4%;
+        color: black;
+    }
+
+    .word {
+        /* margin-right: 1.5rem; */
+        font-size: 2.3rem;
+    }
+
+    .remainingLives,
+    .lives {
+        color: #8e4a1b;
+        font-weight: 400;
+        font-family: "satoshi", sans-serif;
+        font-size: 1.4rem;
+        margin-top: 1%;
+    }
+
+    .lives {
+        font-weight: 700;
+    }
+
+    .letter-div {
+        height: 31.44%;
+        width: 89.11%;
+        /* margin-left: 10%; */
+        margin-top: 8%;
+        margin-left: 5.045%;
+        font-size: 1.5rem;
+        /* border: 2px solid red; */
+    }
+
+    .alpha {
+        width: 38.97px;
+        height: 38.97px;
+        /* height: 8.048%; */
+        background: radial-gradient(109.13% 109.13% at 50.66% 7.54%,
+                #d6af90 9%,
+                #cc9c75 59%,
+                #bc7d4a 95%);
+        /* background: #ffe5b4; */
+        border: none;
+        border-radius: 4px;
+        margin: 6px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .alpha:hover {
+        background-color: #e75480;
+        border: none;
+    }
+
+    .disabled {
+        pointer-events: none;
+        background-color: darkgray;
+    }
+
+    .word-div {
+        display: inline-flex;
+        font-family: "broadway", sans-serif;
+    }
+
+    .word {
+        margin-right: 1.5rem;
+    }
+
+    .notifContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    /* win screen */
+    .notifWin {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/winScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .notif h2,
+    h3,
+    h4 {
+        font-size: 2rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    /* loose screen */
+    .notifContainerLoose {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./img/background.png);
+    }
+
+    .notifLoose {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #fc6c85; */
+        /* width: 20rem; */
+        /* padding: 20px 10px; */
+        /* border-radius: 4px; */
+        /* box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2); */
+        background: url(./img/lossScreen.png);
+        width: 31.4rem;
+        height: 31.4rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7%;
+    }
+
+    .scoreNotifCnotainer {
+        width: 13.14rem;
+        height: 4.3rem;
+        background: linear-gradient(0deg, #EDD6B9 0%, #D4B492 99.95%);
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .notifCoin {
+        width: 4.5rem;
+        height: 3rem;
+    }
+
+    .notifScore {
+        font-size: 2.5rem;
+        ;
+        font-weight: 400;
+        font-family: Broadway;
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #AD5B00;
+    }
+
+    .notifLoose h2,
+    h3,
+    h4 {
+        font-size: 1.5rem;
+        font-family: Broadway;
+    }
+
+    .notifBtn {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .notifBtn button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    .blur {
+        filter: blur(2px);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #hearts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        gap: 4px;
+        margin-right: auto;
+        margin-left: 16px;
+    }
+
+    .hearts .heart {
+        width: 20px;
+        height: 20px;
+        background-color: crimson;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+}
