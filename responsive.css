@@ -2,12 +2,12 @@
 @media screen and (max-width: 375px) {
     .wrapper {
         width: 100%;
-        height: 100%;
-        width: 375px;
-        height: 667px;
+        height: 100vh;
+        /* width: 375px;
+        height: 667px; */
         background: url(./img/Hangman\ bg.png);
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
@@ -380,15 +380,15 @@
     }
 }
 
-@media screen and (max-width: 390px) and (min-width:360px) {
+@media screen and (max-width: 390px) and (min-width:375px) {
     .wrapper {
         width: 100%;
-        height: 100%;
-        width: 393px;
-        height: 851px;
+        height: 100vh;
+        /* width: 393px;
+        height: 851px; */
         background: url(./img/Hangman\ bg.png);
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
@@ -764,12 +764,12 @@
 @media screen and (max-width : 393px) and (min-width : 390px) {
     .wrapper {
         width: 100%;
-        height: 100%;
-        width: 390px;
-        height: 844px;
+        height: 100vh;
+        /* width: 390px;
+        height: 844px; */
         background: url(./img/Hangman\ bg.png);
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
@@ -1145,13 +1145,13 @@
 @media screen and (max-width : 415px) and (min-width : 393px) {
     .wrapper {
         width: 100%;
-        height: 100%;
-        width: 414px;
-        height: 896px;
+        height: 100vh;
+        /* width: 414px;
+        height: 896px; */
         background: url(./img/Hangman\ bg.png);
         background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-repeat: no-repeat; */
     }
 
     .navigationContainer {
@@ -1526,12 +1526,12 @@
 @media screen and (max-width : 1440px) and (min-width : 415px) {
     .wrapper {
         width: 100%;
-        height: 100%;
-        width: 1440px;
-        height: 3120px;
+        height: 100vh;
+        /* width: 1440px;
+        height: 3120px; */
         background: url(./img/Hangman\ bg.png);
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
