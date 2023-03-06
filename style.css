@@ -4,13 +4,13 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 @media only screen and (max-width : 360px) {
 
   .wrapper {
-    width: 100%;
+    max-width: 100vw;
     height: 100vh;
     /* width: 360px;
     height: 800px; */
@@ -21,7 +21,7 @@
   }
 
   .navigationContainer {
-    width: 100%;
+    max-width: 100%;
     height: 10vh;
     display: flex;
     /* justify-content: space-between; */
@@ -200,7 +200,7 @@
 
   .disabled {
     pointer-events: none;
-    background-color: darkgray;
+    background-color: darkgray !important;
   }
 
   .word-div {
@@ -252,7 +252,8 @@
 
   .notifWin h2,
   h3,
-  h4 {
+  h4,
+  span {
     font-size: 2rem;
     font-family: Broadway;
   }
@@ -308,6 +309,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 7%;
+    /* padding-left: 20%; */
   }
 
   .scoreNotifContainer {
@@ -338,20 +340,17 @@
 
     color: #AD5B00;
   }
-  .notifScoreL{
-    font-size: 25rem;
-  }
+
 
   .notifLoose h2,
   h3,
   h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: Broadway;
   }
 
   .notifBtn {
     display: flex;
-    /* border: 2px solid red; */
     width: 25%;
     display: flex;
     justify-content: space-between;
@@ -392,7 +391,25 @@
   }
 
 }
-.notifScoreL, 
-.notifScoreW{
-  font-size: 25px;
+
+.notifScoreL,
+.notifScoreW {
+  font-size: 2.5rem;
+  font-family: Broadway;
+  color: #AD5B00;
+}
+
+.letterDivColor {
+  background-color: grey;
+}
+
+.notif-spanL,
+.notif-spanW {
+  font-size: 1.5rem;
+}
+
+.notifTxt {
+  /* border: 2px solid red; */
+  height: 30%;
+  width: 60%;
 }
