@@ -212,7 +212,6 @@ const letterPress = function () {
     decreaseLife();
   }
   this.classList.add('disabled');
-  // this.classList.remove('alpha');
 };
 
 //A function to use different images for hangman for differnt values of lives remaining
